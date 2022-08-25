@@ -1,6 +1,10 @@
 const mario = document.querySelector('.mario');
 const pipe = document.querySelector('.pipe');
 const clouds = document.querySelector('.clouds');
+const pontuacao = document.querySelector('.pontuacao')
+var maiorPontuacao = document.querySelector('.pontuacaomaior'); 
+var pontuacaomaxima = 0;
+
 
 const pulo = () => {
     mario.classList.add('jump');
@@ -14,8 +18,9 @@ const loop = setInterval(() => {
     const pipePosition = pipe.offsetLeft;
     const marioPosition = +window.getComputedStyle(mario).bottom.replace('px', '');
     const cloudsPosition = clouds.offsetLeft;
-    
    
+
+   //if para encerramento
     if(pipePosition <= 145 && pipePosition > 0 && marioPosition < 89){
         pipe.style.animation = 'none';
         pipe.style.left = `${pipePosition}px`;
@@ -31,6 +36,19 @@ const loop = setInterval(() => {
 
         clearInterval(loop);
     }
+    else{
+        let ultimaPontuacao = 0
+        pontuacaomaxima = pontuacaomaxima + 1;
+        pontuacao.innerHTML = "Pontução: " + pontuacaomaxima;
+        console.log(pontuacaomaxima);
+     //   if(ultimaPontuacao < pontuacaomaxima){
+            
+     //       ultimaPontuacao = pontuacaomaxima;
+     //       maiorPontuacao.innerHTML = "Mair Pontuação: " + ultimaPontuacao;
+     //   }
+    }
 }, 10);
 
-document.addEventListener('keydown', pulo);
+
+
+document.addEventListener('keypress', pulo);

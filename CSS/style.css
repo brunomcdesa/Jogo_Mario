@@ -39,6 +39,13 @@
     animation: cloudsAnimation 15s infinite linear;
 }
 
+.pontuacao, .maiorPontuacao {
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+font-size: large;
+
+}
+
+
 @keyframes pipe-animation {
     from{
         right: -80px;
