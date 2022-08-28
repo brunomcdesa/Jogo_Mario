@@ -39,6 +39,15 @@
     animation: cloudsAnimation 15s infinite linear;
 }
 
+
+.botao{
+    position: absolute;
+    width: 100px;
+    height: 55px;
+    left: 45%;
+    top: 50%;
+}
+
 .pontuacao, .maiorPontuacao {
 font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 font-size: large;
